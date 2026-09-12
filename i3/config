@@ -15,6 +15,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 8
 
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -35,6 +36,10 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+
+# Wallpapers slideshow
+exec --no-startup-id ~/.config/Wallpapers/slideshow.sh &
+
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -210,3 +215,9 @@ bar {
   }
   status_command i3status
 }
+
+
+# Padding
+gaps inner 10
+gaps outer 10
+
