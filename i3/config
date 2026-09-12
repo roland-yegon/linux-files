@@ -221,8 +221,8 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 
 # Padding
-gaps inner 10
-gaps outer 10
+gaps inner 5
+gaps outer 5
 
 # Hide the bars
 default_border pixel 0
