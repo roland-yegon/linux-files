@@ -38,7 +38,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Wallpapers slideshow
-exec --no-startup-id ~/.config/Wallpapers/slideshow.sh &
+exec --no-startup-id ~/.config/Wallpapers/slideshow.sh
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -52,7 +52,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec ghostty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+q kill
@@ -201,23 +201,31 @@ client.background       #FFFFFF
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-  colors {
-    background #000000
-    statusline #FFFFFF
-    separator  #666666
+# bar {
+#   colors {
+#     background #000000
+#     statusline #FFFFFF
+#     separator  #666666
+#
+#     focused_workspace  #83CAFA #51A2DA #FFFFFF
+#     active_workspace   #3C6EB4 #294172 #FFFFFF
+#     inactive_workspace #8C8C8C #4C4C4C #888888
+#     urgent_workspace   #EC69A0 #DB3279 #FFFFFF
+#     binding_mode       #b691d3 #A07CBC #FFFFFF
+#   }
+#  status_command i3status
+# }
 
-    focused_workspace  #83CAFA #51A2DA #FFFFFF
-    active_workspace   #3C6EB4 #294172 #FFFFFF
-    inactive_workspace #8C8C8C #4C4C4C #888888
-    urgent_workspace   #EC69A0 #DB3279 #FFFFFF
-    binding_mode       #b691d3 #A07CBC #FFFFFF
-  }
-  status_command i3status
-}
+# Polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 
 # Padding
 gaps inner 10
 gaps outer 10
+
+# Hide the bars
+default_border pixel 0
+default_floating_border pixel 0
+hide_edge_borders both
 
