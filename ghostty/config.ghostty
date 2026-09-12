@@ -1,0 +1,3 @@
+# Make Ghostty transparent
+background-opacity = 0.85
+# backgroung-blur = true
